@@ -1,0 +1,11 @@
+* 初始化Git
+
+    git config --global user.name "CodeWaySky"
+    git config --global user.email "codewaysky.go@gmail.com"
+    git config --global color.ui true
+
+* 当发现user.name或user.email设置错误，但已经git commit的时候，修复方法（先配置好user.name和user.email）：
+
+    git commit --amend --reset-author -C HEAD
+
+
