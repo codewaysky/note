@@ -8,4 +8,32 @@
 
     git commit --amend --reset-author -C HEAD
 
+* 新建分支
+
+    git branch mybranch1
+    git checkout mybranch1
+    这两句可以合并为一句：
+    git checkout -b mybranch1
+
+    下面是创建个临时文件并提交：
+    touch hello1
+    git add .
+    git commit -m "add hello1"
+
+    然后推送到GitHub：
+    git push -u origin mybranch1
+
+* 删除分支
+
+    首先切换回其他分支：
+    git checkout master
+
+    然后删除分支：（-D强制删除，-d当此分支已合并才删除）
+    git branch -D mybranch1
+
+    删除GitHub版本库中的分支：
+    git push origin :mybranch1
+    （注意，需要此分支不为缺省分支，否则无法删除）
+
+
 
